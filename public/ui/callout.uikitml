@@ -1,0 +1,30 @@
+<!--
+  Label at the end of the lock-on leader line (Iron Man HUD target callout).
+-->
+<style>
+  .tag {
+    flex-direction: column;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(4, 16, 24, 0.75);
+    border-color: #00d4ff;
+    border-width: 1px;
+    border-radius: 4px;
+  }
+
+  .main {
+    font-size: 18px;
+    color: #ffffff;
+  }
+
+  .sub {
+    font-size: 13px;
+    color: #00d4ff;
+  }
+</style>
+<div id="callout-root" class="tag">
+  <div id="callout-main" class="main">-</div>
+  <div id="callout-sub" class="sub">-</div>
+</div>

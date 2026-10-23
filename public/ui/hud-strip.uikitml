@@ -1,0 +1,54 @@
+<!--
+  Bottom-edge HUD strip: the assistant's state and what it just said
+  (captions, per Meta's voice and accessibility guidance). Iron Man HUD look:
+  small, thin cyan line, centre of the view left clear.
+-->
+<style>
+  .strip {
+    flex-direction: row;
+    align-items: center;
+    width: 560px;
+    gap: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 14px;
+    padding-right: 16px;
+    background-color: rgba(4, 16, 24, 0.7);
+    border-color: #00d4ff;
+    border-width: 1px;
+    border-radius: 24px;
+  }
+
+  .state {
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-color: #00d4ff;
+    border-width: 1px;
+    border-radius: 14px;
+  }
+
+  .state-label {
+    font-size: 14px;
+    color: #00d4ff;
+  }
+
+  .caption {
+    width: 440px;
+    flex-shrink: 1;
+    font-size: 17px;
+    line-height: 1.45;
+    color: #ffffff;
+  }
+</style>
+<div id="hud-root" class="strip">
+  <div id="hud-state" class="state">
+    <div id="hud-state-label" class="state-label">待機中</div>
+  </div>
+  <div id="hud-caption" class="caption">-</div>
+</div>

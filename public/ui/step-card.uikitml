@@ -1,0 +1,105 @@
+<!--
+  Step card. Layout follows Dynamics 365 Guides' operator step card:
+  step number / title / one sentence, with large back and next buttons on the
+  left and right edges. Look follows the Iron Man HUD: dark glass, thin cyan
+  line, white text. Text and the Japanese font are set at runtime
+  (src/guide-system.ts, src/jp-font.ts).
+-->
+<style>
+  .card {
+    flex-direction: row;
+    align-items: center;
+    width: 520px;
+    background-color: rgba(4, 16, 24, 0.82);
+    border-color: #00d4ff;
+    border-width: 1px;
+    border-radius: 10px;
+  }
+
+  .edge {
+    width: 64px;
+    height: 64px;
+    align-self: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .body {
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding-top: 0px;
+    padding-bottom: 16px;
+    gap: 8px;
+  }
+
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: rgba(0, 212, 255, 0.16);
+    border-radius: 6px;
+    margin-top: 12px;
+  }
+
+  .step-no {
+    font-size: 18px;
+    color: #00d4ff;
+  }
+
+  .time {
+    font-size: 16px;
+    color: #cfefff;
+  }
+
+  .title {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #ffffff;
+  }
+
+  .hint {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #d8eef7;
+  }
+
+  .safety {
+    font-size: 16px;
+    color: #7fe3c4;
+  }
+
+  .checks {
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 4px;
+  }
+</style>
+<div id="card-root" class="card">
+  <Button id="btn-prev" class="edge">
+    <ButtonIcon><ArrowLeft></ArrowLeft></ButtonIcon>
+  </Button>
+  <div class="body">
+    <div id="card-header" class="header">
+      <div id="step-no" class="step-no">工程</div>
+      <div id="step-time" class="time">推定</div>
+    </div>
+    <div id="step-title" class="title">位置合わせ</div>
+    <div id="step-hint" class="hint">-</div>
+    <div id="step-safety" class="safety">-</div>
+    <div id="checks" class="checks">
+      <Button id="chk-m1"><ButtonLabel id="chk-m1-label">M1</ButtonLabel></Button>
+      <Button id="chk-m2"><ButtonLabel id="chk-m2-label">M2</ButtonLabel></Button>
+      <Button id="chk-m3"><ButtonLabel id="chk-m3-label">M3</ButtonLabel></Button>
+      <Button id="chk-m4"><ButtonLabel id="chk-m4-label">M4</ButtonLabel></Button>
+    </div>
+  </div>
+  <Button id="btn-next" class="edge">
+    <ButtonIcon><ArrowRight></ArrowRight></ButtonIcon>
+  </Button>
+</div>

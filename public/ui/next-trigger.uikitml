@@ -1,0 +1,34 @@
+<!--
+  Palm-sized "next" button placed on the desk next to the real drone,
+  after Dynamics 365 Guides' trigger: put your hand on it to advance.
+-->
+<style>
+  .pad {
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    gap: 6px;
+    background-color: rgba(4, 16, 24, 0.75);
+    border-color: #00d4ff;
+    border-width: 1px;
+    border-radius: 16px;
+  }
+
+  .go {
+    width: 150px;
+    height: 110px;
+  }
+
+  .go-label {
+    font-size: 16px;
+    color: #00d4ff;
+  }
+</style>
+<div id="trigger-root" class="pad">
+  <Button id="trigger-next" class="go">
+    <ButtonIcon><ArrowRight></ArrowRight></ButtonIcon>
+  </Button>
+  <div id="trigger-label" class="go-label">つぎへ</div>
+</div>
